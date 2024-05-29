@@ -1,0 +1,9 @@
+body {
+    height:600px;
+    width:800px;
+    background-color:bisque;
+}
+img.square{
+    height:250px;
+    width:250px;
+}
