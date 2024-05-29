@@ -7,7 +7,7 @@ img.square{
     height:250px;
     width:250px;
 }
-img.square + figcaption{
+.dashed{
     width:250px;
     border-style: dashed;
     text-align: center;
