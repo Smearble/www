@@ -7,3 +7,9 @@ img.square{
     height:250px;
     width:250px;
 }
+img.square + figcaption{
+    width:250px;
+    border-style: dashed;
+    border-top-style: none;
+    text-align: center;
+}
