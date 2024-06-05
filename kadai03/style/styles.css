@@ -16,3 +16,9 @@ a:visited{
 table{
     border-collapse: collapse;
 }
+td{
+    text-align:left;
+}
+tr,td{
+    width:200%;
+}
