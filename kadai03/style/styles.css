@@ -18,7 +18,5 @@ table{
 }
 td{
     text-align:left;
-}
-tr,td{
-    width:200%;
+    width:150%;
 }
