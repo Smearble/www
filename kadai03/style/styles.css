@@ -13,3 +13,6 @@ a:link {
 a:visited{
     color:darkorange;
 }
+table{
+    border:solid;
+}
