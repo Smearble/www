@@ -14,5 +14,5 @@ a:visited{
     color:darkorange;
 }
 table{
-    border:solid;
+    border-collapse: collapse;
 }
