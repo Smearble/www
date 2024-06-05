@@ -16,6 +16,9 @@ a:visited{
 table{
     border-collapse: collapse;
 }
+th{
+    background-color: lightgray;
+}
 td{
     text-align:left;
     width:15em;
