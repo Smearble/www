@@ -1,0 +1,26 @@
+body{
+    background-color: lightblue;
+}
+.box{
+    border:#333 solid 2px;
+    padding:20px;
+    margin:20px 0;
+}
+.box1 {
+    background-color: #e6f7ff;
+    border-radius:10px;
+}
+.box2{
+    background-color: #fff2e6;
+    border-radius:5px;
+    box-shadow:3px 3px 3px 10px rgba(0,0,0,0.1);
+}
+.box3{
+    border-style:dashed;
+    background-color: #f9e6ff;
+    border-radius:0px;
+}
+img{
+    width:10%;
+    height:10%;
+}
