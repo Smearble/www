@@ -1,9 +1,8 @@
 h1.q1::before{
-    content:"<div class=\"greenArrow\">&gt;</div>";
-}
-.greenArrow{
+    content:">";
     border-radius: 50%;
     background-color: aquamarine;
+    display: inline-block;
     height:1em;
     width:1em;
 }
