@@ -5,6 +5,10 @@ h1.q1::before{
     display: inline-block;
     height:1em;
     width:1em;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 body{
     background-color: #fff;
