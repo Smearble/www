@@ -4,10 +4,10 @@ h1.q1::before{
     border-radius: 50%;
     background-color: aquamarine;
     display: inline-block;
-    height:1em;
-    width:1em;
+    height:1.5rem;
+    width:1.5rem;
     text-align: center;
-    line-height: 1em;
+    line-height: 1.5rem;
     font-size:1rem;
 }
 body{
