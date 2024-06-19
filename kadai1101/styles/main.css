@@ -6,9 +6,7 @@ h1.q1::before{
     height:1em;
     width:1em;
     text-align: center;
-    /* position: relative;
-    top: 50%;
-    transform: translateY(-50%); */
+    line-height: 1em;
 }
 body{
     background-color: #fff;
@@ -20,8 +18,4 @@ h1{
     color:#333;
     font-size:1.5rem;
     line-height:1.25;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
