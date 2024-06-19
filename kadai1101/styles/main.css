@@ -2,6 +2,8 @@ h1.q1::before{
     content:">";
     border-radius: 50%;
     background-color: aquamarine;
+    height:1em;
+    width:1em;
 }
 body{
     background-color: #fff;
