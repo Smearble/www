@@ -1,5 +1,7 @@
 h1.q1::before{
-    content:">";
+    content:"<div class=\"greenArrow\">&gt;</div>";
+}
+.greenArrow{
     border-radius: 50%;
     background-color: aquamarine;
     height:1em;
