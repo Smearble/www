@@ -8,6 +8,7 @@ h1.q1::before{
     width:1.5rem;
     text-align: center;
     font-size:1rem;
+    vertical-align:middle;
 }
 body{
     background-color: #fff;
