@@ -9,7 +9,7 @@ h1.q2::before{
     content: "";
     position: absolute;
     top: 100%;
-    left: 25%;
+    left: 15%;
     margin-left: -15px;
     border: 15px solid transparent;
     border-top: 15px solid #5bdb9e;
