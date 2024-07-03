@@ -4,7 +4,7 @@
 .sec{
     margin:1%;
     padding:1em;
-    box-shadow:3px 3px 3px 10px rgba(0,0,0,0.1);
+    box-shadow:1px 1px 1px 3px rgba(0,0,0,0.1);
 }
 .sec1{
     background-color: lightblue;
@@ -19,23 +19,23 @@ img{
     width:calc(100%*2/3);
 }
 @media screen and (min-width:600px){
-    .flex{
+    /* .flex{
         display:flex;
         flex-wrap: wrap;
         justify-content:space-between;
-    }
+    } */
     .sec1{
-        width:calc(98%/2);
+        float:left;
     }
     .sec2{
-        width:calc(98%/2);
+        float:left;
     }
-    .sec3{
+    /* .sec3{
         width:98%;
-    }
+    } */
 }
 @media screen and (min-width:1025px){
-    .flex{
+    /* .flex{
         flex-wrap:nowrap;
     }
     .sec1{
@@ -43,8 +43,9 @@ img{
     }
     .sec2{
         width:auto;
-    }
+    } */
     .sec3{
-        width:auto;
+        /* width:auto; */
+        float:left;
     }
 }
