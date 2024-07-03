@@ -30,6 +30,10 @@ img{
     .sec2{
         float:left;
     }
+    .sec3{
+        float:left;
+        clear: both;
+    }
     /* .sec3{
         width:98%;
     } */
@@ -46,6 +50,6 @@ img{
     } */
     .sec3{
         /* width:auto; */
-        float:left;
+        clear:none;
     }
 }
