@@ -1,7 +1,10 @@
 /*.flex{
     display: flex;
 }*/
-.sec{
+.flex {
+    overflow: hidden;
+}
+.flex >{
     margin:1%;
     padding:1em;
     box-shadow:1px 1px 1px 3px rgba(0,0,0,0.1);
@@ -26,9 +29,11 @@ img{
     } */
     .sec1{
         float:left;
+        width:50%;
     }
     .sec2{
         float:left;
+        width:50%;
     }
     .sec3{
         float:left;
