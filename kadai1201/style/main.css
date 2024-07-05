@@ -5,7 +5,8 @@
     --shadow-length-width:2%;
     --pad:5%;
     --margin:1%;
-    --width:calc((100/var(--xnum)) - var(--shadow-length-width)*2 - var(--pad)*2 - var(--margin) *2);
+    --tmp-width:calc(100/ var(--xnum));
+    --width:calc(var(--tmp-width) - 2 * ( var(--pad) + var(--margin) + var(--shadow-length-width) ));
 }
 .flex >{
     margin:var(--margin);
