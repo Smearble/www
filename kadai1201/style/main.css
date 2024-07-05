@@ -5,7 +5,7 @@
     --shadow-length-width:2%;
     --pad:5%;
     --margin:1%;
-    --width:calc( 50% - 6% - 20px );
+    --width:calc(40% - 20px );;
 }
 .flex > *{
     margin:var(--margin);
