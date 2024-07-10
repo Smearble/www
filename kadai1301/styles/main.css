@@ -38,7 +38,7 @@ img {
     background-color: lightgreen;
 }
 #b1{
-    background-color: greenyellow;
+    background-color: rgb(138, 222, 12);
 }
 #b2{
     background-color: red;
@@ -47,7 +47,7 @@ img {
     background-color: blue;
 }
 #b4{
-    background-color: yellow;
+    background-color: rgb(203, 203, 0);
 }
 body{
     background-color: #d7f0f9;
