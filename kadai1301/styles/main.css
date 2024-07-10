@@ -1,3 +1,8 @@
+header{
+    background-color: black;
+    color:white;
+    text-align:center;
+}
 .container{
     display:grid;
     grid-template-columns: repeat(1,1fr);
@@ -8,8 +13,8 @@ img {
     border-radius: 10px;
 }
 .container > *{
-    padding:5px;
-    margin:0.5em;
+    padding:0.2em;
+    margin:10px;
     border-radius: 10px;
 }
 button {
@@ -39,7 +44,7 @@ button {
 #b4{
     background-color: yellow;
 }
-@media screen and (min-width:calc(400px + 3em)) {
+@media screen and (min-width:calc(400px + 1em)) {
     .container > *{
         width:200px;
     }
@@ -48,12 +53,12 @@ button {
         grid-template-rows: repeat(2,400px);
     }
 }
-@media screen and (min-width:calc(600px + 4.5em)){
+@media screen and (min-width:calc(600px + 1.5em)){
     .container{
         grid-template-columns: repeat(3,1fr);
     }
 }
-@media screen and (min-width:calc(800px + 6em)){
+@media screen and (min-width:calc(800px + 2em)){
     .container{
         grid-template-columns: repeat(4,1fr);
         grid-template-rows: repeat(1,400px);
