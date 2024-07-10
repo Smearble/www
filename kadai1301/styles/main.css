@@ -2,6 +2,7 @@ header{
     background-color: black;
     color:white;
     text-align:center;
+    padding:5px 0;
 }
 .container{
     display:grid;
@@ -22,6 +23,7 @@ img {
     border-radius: 10px;
     padding:5px;
     width:max-content;
+    color:white;
 }
 #section1{
     background-color: lightblue;
@@ -47,7 +49,7 @@ img {
 #b4{
     background-color: yellow;
 }
-@media screen and (min-width:calc(420px + 2em)) {
+@media screen and (min-width:calc(430px + 2em)) {
     .container > *{
         width:200px;
     }
@@ -56,12 +58,12 @@ img {
         grid-template-rows: repeat(2,400px);
     }
 }
-@media screen and (min-width:calc(640px + 4em)){
+@media screen and (min-width:calc(645px + 3em)){
     .container{
         grid-template-columns: repeat(3,1fr);
     }
 }
-@media screen and (min-width:calc(860px + 6em)){
+@media screen and (min-width:calc(860px + 4em)){
     .container{
         grid-template-columns: repeat(4,1fr);
         grid-template-rows: repeat(1,400px);
