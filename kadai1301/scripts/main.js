@@ -1,3 +1,3 @@
 function showAlert(x){
-    window.alert("pushed " + x + "button" )
+    window.alert("pushed " + x + " button" )
 }
