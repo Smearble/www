@@ -67,8 +67,11 @@ body{
     }
 }
 @media screen and (min-width:calc(880px + 4em)){
+    .container > *{
+        width:auto;
+    }
     .container{
         grid-template-columns: repeat(4,1fr);
-        grid-template-rows: repeat(1,480px);
+        grid-template-rows: repeat(1,1fr);
     }
 }
