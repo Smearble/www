@@ -29,7 +29,7 @@
         <label><input type="checkbox" id="c2">ネット（<span id="c2_price">300</span>円）</label><br>
         <label><input type="checkbox" id="c3">ボール×10個（<span id="c3_price">400</span>円）</label>
     </form>
-    <p>合計金額　<span id="total">2000</span>円</p>
+    <p>合計金額　<span id="total">2000円</span></p>
     
     <script>
         function checkSum(){
@@ -43,7 +43,7 @@
             if(document.getElementById("c3").checked){
                 price += parseInt(document.getElementById("c3_price").textContent);
             }
-            document.getElementById("total").textContent=price;
+            document.getElementById("total").textContent=price+"円";
         }
     </script>
 </body>
