@@ -15,10 +15,10 @@
     <button onclick="divide()">割り算</button>
     <script>
         function getA(){
-            return document.getElementById("numA").value;
+            return parseInt(document.getElementById("numA").value);
         }
         function getB(){
-            return document.getElementById("numB").value;
+            return parseInt(document.getElementById("numB").value);
         }
         function add(){
             alert(getA()+getB());
