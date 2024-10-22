@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        table,td{
+            border:2px #000 solid;
+        }
+        table:first-child *,tr:first-child{
+            font-weight:bold;
+            background-color: orange;
+        }
+    </style>
 </head>
 <body>
     <h2>利用料の計算</h2>
@@ -15,9 +24,36 @@
             <td>a×b</td>
         </tr>
         <tr>
-            <td></td>
+            <td>0</td>
+            <td>500</td>
+            <td>10</td>
+            <td><button onclick="multiply_0()">利用料の合計</button></td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>500</td>
+            <td>10</td>
+            <td><button onclick="multiply(0)">利用料の合計</button></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>980</td>
+            <td>16</td>
+            <td><button onclick="multiply(1)">利用料の合計</button></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>1200</td>
+            <td>8</td>
+            <td><button onclick="multiply(2)">利用料の合計</button></td>
         </tr>
     </table>
-    
+    <script>
+        a=[500,980,1200];
+        b=[10,16,8];
+        function multiply(index){
+            alert("料金は"+a[index]*b[index]+"円です");
+        }
+    </script>
 </body>
 </html>
