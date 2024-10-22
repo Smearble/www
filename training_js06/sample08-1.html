@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>関数の引数</title>
+</head>
+<body>
+    <h1>割引セール実施中</h1>
+    <p>ボタンをクリックすると、割引後の価格が表示されます。</p>
+    <ul>
+        <li>S席(6000円) <button onclick="sale_S()">20% off</button></li>
+        <li>A席(4200円) <button onclick="sale_A()">20% off</button></li>
+        <li>B席(2800円) <button onclick="sale_B()">20% off</button></li>
+    </ul>
+    <script>
+        function sale(n){
+            alert("割引後の価格は"+(n*0.8)+"円です");
+        }
+        sale_S = bind(sale,6000);
+        sale_A = bind(sale,4200);
+        sale_B = bind(sale,2800);
+    </script>
+</body>
+</html>
