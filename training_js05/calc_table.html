@@ -7,8 +7,9 @@
     <style>
         table,td{
             border:2px #000 solid;
+            border-collapse: collapse;
         }
-        table:first-child *,tr:first-child{
+        table tr:first-child , tr td:first-child {
             font-weight:bold;
             background-color: orange;
         }
@@ -22,12 +23,6 @@
             <td>料金(a)</td>
             <td>人数(b)</td>
             <td>a×b</td>
-        </tr>
-        <tr>
-            <td>0</td>
-            <td>500</td>
-            <td>10</td>
-            <td><button onclick="multiply_0()">利用料の合計</button></td>
         </tr>
         <tr>
             <td>0</td>
