@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,td{
+            border:2px #000 solid;
+            border-collapse: collapse;
+            text-align:right;
+            min-width:3em;
+            min-height:10em;
+            padding:1ex;
+        }
+        tr:first-child *, tr td:first-child {
+            text-align:center;
+            font-weight:bold;
+            background-color: #fc9;
+        }
+        tr td:not(:first-child){
+            min-width:4em;
+        }
+    </style>
+</head>
+<body>
+    <h2>利用料の計算</h2>
+    <table id="calc_table">
+        <tr>
+            <td>No.</td>
+            <td>料金(a)</td>
+            <td>人数(b)</td>
+            <td>a×b</td>
+        </tr>
+        <!--
+        <tr>
+            <td>0</td>
+            <td>500</td>
+            <td>10</td>
+            <td><button onclick="multiply(0)">利用料の合計</button></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>980</td>
+            <td>16</td>
+            <td><button onclick="multiply(1)">利用料の合計</button></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>1200</td>
+            <td>8</td>
+            <td><button onclick="multiply(2)">利用料の合計</button></td>
+        </tr>
+        -->
+    </table>
+    <script>
+        let a=[500,980,1200];
+        let b=[10,16,8];
+        function multiply(index){
+            alert("料金は"+a[index]*b[index]+"円です");
+        }
+        function addRow(index){
+            let ele = document.createElement("tr");
+            ele.insertAdjacentHTML("afterbegin",
+                `
+                <td>${index}</td>
+                <td>${a[index]}</td>
+                <td>${b[index]}</td>
+                <td><button onclick="multiply(${index})">利用料の合計</button></td>
+                `
+            )
+            document.getElementById("calc_table").append(ele);
+        }
+        for(let i=0;i<a.length;i++){
+            addRow(i);
+        }
+    </script>
+</body>
+</html>
