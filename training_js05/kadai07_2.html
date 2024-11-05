@@ -7,7 +7,7 @@
     <style>
         .imgBox{
             display:flex;
-            flex-wrap: wrap-reverse;
+            flex-wrap: wrap;
         }
     </style>
 </head>
@@ -19,7 +19,7 @@
         function showImages(){
             let e = document.createElement("div");
             e.classList.add("imgBox");
-            for(let i=1;i<=8;i++){
+            for(let i=8;i>=1;i--){
                 e.insertAdjacentHTML("afterbegin",`<img src="img/photo_${i}.jpg">`);
             }
             document.getElementById("img_button").replaceWith(e);
