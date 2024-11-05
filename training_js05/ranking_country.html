@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>複数の要素の取得</title>
+</head>
+<body>
+    <h1>人口の多い国ランキング</h1>
+    <ol id="country_list">
+        <li>中国</li>
+        <li>インド</li>
+        <li>アメリカ</li>
+        <li>インドネシア</li>
+    </ol>
+    <button onclick="toFlag();">国旗で表示</button>
+    <script>
+        let countryNameComp ={
+            "中国":"CHN",
+            "インド":"IND",
+            "アメリカ":"USA",
+            "インドネシア":"IDN"
+        }
+        function toFlag(){
+            let cList = document.getElementById("country_list").children;
+            for(let e of cList){
+                let s = countryNameComp[e.innerHTML];
+                let newE = document.createElement("img");
+                newE.src=`img/flag_${s}.png`;
+                e.replaceWith(newE);
+            }
+        }
+    </script>
+</body>
+</html>
