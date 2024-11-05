@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>要素の追加と削除</title>
+    <style>
+        .imgBox{
+            display:flex;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>写真の一覧</h1>
+    <p>以下のボタンをクリックすると、写真の一覧が表示されます</p>
+    <button onclick="showImages();" id="img_button">写真を表示</button>
+    <script>
+        function showImages(){
+            let e = document.createElement("div");
+            e.classList.add("imgBox");
+            for(let i=1;i<=8;i++){
+                e.insertAdjacentHTML("afterbegin",`<img src="img/photo_${i}.jpg">`);
+            }
+            document.getElementById("img_button").replaceWith(e);
+        }
+    </script>
+</body>
+</html>
