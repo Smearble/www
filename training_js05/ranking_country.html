@@ -25,9 +25,10 @@
             let cList = document.getElementById("country_list").children;
             for(let e of cList){
                 let s = countryNameComp[e.innerHTML];
-                let newE = document.createElement("img");
-                newE.src=`img/flag_${s}.png`;
-                e.replaceWith(newE);
+                // let newE = document.createElement("img");
+                // newE.src=`img/flag_${s}.png`;
+                // e.replaceWith(newE);
+                e.innerHTML = `<img src="img/flag_${s}.png" alt="${s}'s flag">`;
             }
         }
     </script>
