@@ -38,10 +38,10 @@
         }
         let order=["大人","高校生","中学生","小学生"]
         function maketh(){
-            let ele = document.createElement("th");
-            ele.insertAdjacentHTML("beforeend","<td></td>");
+            let ele = document.createElement("tr");
+            ele.insertAdjacentHTML("beforeend","<th></th>");
             for(let i=0;i<order.length;i++){
-                ele.insertAdjacentHTML("beforeend",`<td>${order[i]}</td>`);
+                ele.insertAdjacentHTML("beforeend",`<th>${order[i]}</th>`);
             }
             return ele;
         }
