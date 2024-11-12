@@ -13,7 +13,7 @@
             min-height:10em;
             padding:1ex;
         }
-        th, tr td:first-child {
+        tr:first-child *, tr td:first-child {
             text-align:center;
             font-weight:bold;
             background-color: #fc9;
@@ -37,11 +37,11 @@
             "小学生":[380,760,1140,1520,1900]
         }
         let order=["大人","高校生","中学生","小学生"]
-        function maketh(){
+        function makeheads(){
             let ele = document.createElement("tr");
-            ele.insertAdjacentHTML("beforeend","<th></th>");
+            ele.insertAdjacentHTML("beforeend","<td></td>");
             for(let i=0;i<order.length;i++){
-                ele.insertAdjacentHTML("beforeend",`<th>${order[i]}</th>`);
+                ele.insertAdjacentHTML("beforeend",`<td>${order[i]}</td>`);
             }
             return ele;
         }
@@ -63,7 +63,7 @@
         for(let i=0;i<order.length;i++){
             MaxIndex = MaxIndex > feeList[order[i]].length ? MaxIndex : feeList[order[i]].length;
         }
-        targetTable.append(maketh());
+        targetTable.append(makeheads());
         for(let i=0;i<MaxIndex;i++){
             targetTable.append(maketr(i));
         }
