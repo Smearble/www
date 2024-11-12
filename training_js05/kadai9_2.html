@@ -47,7 +47,7 @@
         }
         function maketr(index){
             let ele = document.createElement("tr");
-            ele.insertAdjacentHTML("beforeend",`${index}人`)
+            ele.insertAdjacentHTML("beforeend",`<td>${index}人</td>`)
             for(let i=0;i<order.length;i++){
                 if(Number.isInteger(feeList[order[i]][index])){
                     ele.insertAdjacentHTML("beforeend",
