@@ -29,6 +29,7 @@
         
     </table>
     <script>
+        let targetTable = document.getElementById("feeTable");
         let feeList={
             "大人":[800,1600,2400,3200,4000],
             "高校生":[680,1360,2040,2720,3400],
@@ -36,15 +37,15 @@
             "小学生":[380,760,1140,1520,1900]
         }
         let order=["大人","高校生","中学生","小学生"]
-        function addth(){
+        function maketh(){
             let ele = document.createElement("th");
             ele.insertAdjacentHTML("beforeend","<td></td>");
             for(let i=0;i<order.length;i++){
                 ele.insertAdjacentHTML("beforeend",`<td>${order[i]}</td>`);
             }
-            document.getElementById(feeTable).append(ele);
+            return ele;
         }
-        function addtr(index){
+        function maketr(index){
             let ele = document.createElement("tr");
             ele.insertAdjacentHTML("beforeend",`${index}人`)
             for(let i=0;i<order.length;i++){
@@ -56,14 +57,15 @@
                     ele.insertAdjacentHTML("beforeend","<td>-</td>")
                 }
             }
-            document.getElementById("feeTable").append(ele);
+            return ele;
         }
         let MaxIndex=0;
         for(let i=0;i<order.length;i++){
             MaxIndex = MaxIndex > feeList[order[i]].length ? MaxIndex : feeList[order[i]].length;
         }
+        targetTable.append(maketh());
         for(let i=0;i<MaxIndex;i++){
-            addtr(i);
+            targetTable.append(maketr(i));
         }
     </script>
 </body>
