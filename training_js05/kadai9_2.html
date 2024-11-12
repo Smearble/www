@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,td{
+            border:2px #000 solid;
+            border-collapse: collapse;
+            text-align:right;
+            min-width:3em;
+            min-height:10em;
+            padding:1ex;
+        }
+        th, tr td:first-child {
+            text-align:center;
+            font-weight:bold;
+            background-color: #fc9;
+        }
+        tr td:not(:first-child){
+            min-width:4em;
+        }
+    </style>
+</head>
+<body>
+    <h2>入場料の一覧</h2>
+    <table id="feeTable">
+        
+    </table>
+    <script>
+        let feeList={
+            "大人":[800,1600,2400,3200,4000],
+            "高校生":[680,1360,2040,2720,3400],
+            "中学生":[450,900,1350,1800,2250],
+            "小学生":[380,760,1140,1520,1900]
+        }
+        let order=["大人","高校生","中学生","小学生"]
+        function addth(){
+            let ele = document.createElement("th");
+            ele.insertAdjacentHTML("beforeend","<td></td>");
+            for(let i=0;i<order.length;i++){
+                ele.insertAdjacentHTML("beforeend",`<td>${order[i]}</td>`);
+            }
+            document.getElementById(feeTable).append(ele);
+        }
+        function addtr(index){
+            let ele = document.createElement("tr");
+            ele.insertAdjacentHTML("beforeend",`${index}人`)
+            for(let i=0;i<order.length;i++){
+                if(Number.isInteger(feeList[order[i]][index])){
+                    ele.insertAdjacentHTML("beforeend",
+                        `<td>${feeList[order[i]][index]}</td>`
+                    )
+                }else{
+                    ele.insertAdjacentHTML("beforeend","<td>-</td>")
+                }
+            }
+            document.getElementById("table").append(ele);
+        }
+        let MaxIndex=0;
+        for(let i=0;i<order.length;i++){
+            MaxIndex = MaxIndex > feeList[order[i]].length ? MaxIndex : feeList[order[i]].length;
+        }
+        for(let i=0;i<MaxIndex;i++){
+            addtr(i);
+        }
+    </script>
+</body>
+</html>
