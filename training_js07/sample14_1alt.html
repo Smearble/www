@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>条件分岐</title>
+    <style>
+        .bigfont{
+            font-size:32px;
+            margin:25px;
+        }
+    </style>
+</head>
+<body>
+    <h3>問題</h3>
+    <p>次の方程式を満たす解を求めなさい。</p>
+    <p class="bigfont">x+6=9</p>
+    <div id="msg" class="big_font"></div>
+    <script>
+        [...Array(5)].map(x=>x+1).forEach(y=>
+            document.getElementById("msg").insertAdjacentHTML(
+                "beforebegin",
+                `<button onclick="check(${y})">x = ${y}</button>`
+            )
+        );
+        function check(x){
+            switch(x){
+                case 3:
+                    document.getElementById("msg").textContent = "正解！";
+                    break;
+                default:
+                    document.getElementById("msg").textContent = "間違い！";
+            }
+        }
+    </script>
+</body>
+</html>
