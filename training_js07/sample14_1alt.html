@@ -17,7 +17,7 @@
     <p class="bigfont">x+6=9</p>
     <div id="msg" class="big_font"></div>
     <script>
-        [...Array(5)].map(x=>x+1).forEach(y=>
+        [...Array(5).keys()].map(x=>x+1).forEach(y=>
             document.getElementById("msg").insertAdjacentHTML(
                 "beforebegin",
                 `<button onclick="check(${y})">x = ${y}</button>`
