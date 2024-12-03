@@ -28,10 +28,7 @@
 function show(){
     let anser = calc(x=>Math.pow(x,3)-53*Math.pow(x,2)+620*x-1036==0,3);
     let text = "";
-    for(e of anser){
-        text += e + "、";
-    }
-    text = text.slice(0,-1) + "が解です。";
+    text = anser.join("、") + "が解です。";
     document.getElementById("message").textContent = text;
 }
 function calc(func,maxc){
