@@ -6,7 +6,10 @@
 <meta charset="UTF-8">
 <title>breakの活用</title>
 <style>
-
+.big_font{
+    font-size:32px;
+    margin:25px;
+}
 
 
 
@@ -36,6 +39,9 @@ function calc(func,count){
     let answers = [];
     while(answers.length < count){
         if(func(i)){answers.push(i);}
+        if(answers.length == count){
+            break;
+        }
         i++;
     }
     return answers;
