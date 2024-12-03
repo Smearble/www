@@ -35,14 +35,12 @@ function show(){
     document.getElementById("message").textContent = text;
 }
 function calc(func,maxc){
-    let i = 0;
     let answers = [];
-    while(answers.length < maxc){
+    for(let i = 0;answers.length < maxc;i++){
         if(func(i)){answers.push(i);}
         if(answers.length == maxc){
             break;
         }
-        i++;
     }
     return answers;
 }
