@@ -16,14 +16,15 @@
         document.getElementById("p1").innerHTML
         = [...Array(10).keys()].map(x=>x+1).join("、")
         + "で<br/>割り切れる最小の数字をJavaScriptで求めます。";
+        function gcd(a,b){
+            return  b?gcd(b,a%b):a;
+        }
+        function lcm(a,b){
+            return (a*b) / gcd(a,b);
+        }
         const calcResult = len=>{
             let arr=[...Array(len-1).keys()].map(x=>x+2);
-            for(let idx=0;idx < arr.length;idx++){
-                arr = arr.filter(e=>arr[idx]!=e);
-            }
-            let res=0;
-            while(arr.reduce((x,y)=>x%y?1:x),++res);
-            return res;
+            return arr.reduce(lcm,1);
         }
         function showResult(){
             document.getElementById("result").innerHTML =`
