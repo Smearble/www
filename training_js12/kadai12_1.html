@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>関数の戻り値</title>
+</head>
+<body>
+    <h1>1~10で割り切れる数字</h1>
+    <p id="p1"></p>
+    <button onclick="showResult()">結果を見る</button>
+    <div id="result" class="attention">
+        ここに結果が表示されます。
+    </div>
+    <script>
+        document.getElementById("p1").innerHTML
+        = [...Array(10).keys()].map(x=>x+1).join("、")
+        + "で<br/>割り切れる最小の数字をJavaScriptで求めます。";
+        const calcResult = len=>{
+            let arr=[...Array(len-1).keys()].map(x=>x+2);
+            for(let idx=0;idx < arr.length;idx++){
+                arr = arr.filter(e=>arr[idx]!=e);
+            }
+            let res=0;
+            while(arr.reduce((x,y)=>x%y?1:x),++res);
+            return res;
+        }
+        function showResult(){
+            document.getElementById("result").innerHTML =`
+            答えは${calcResult()}です。
+            `
+        }
+    </script>
+</body>
+</html>
