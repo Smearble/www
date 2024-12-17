@@ -39,7 +39,7 @@
         function showResult(){
             let stLt = [];
             while(true){
-                stLt[0]= prompt("範囲の最小値を1~10で入力してください。",1);
+                stLt[0]= parseInt(prompt("範囲の最小値を1~10で入力してください。",1));
                 if(isInnerRange(stLt[0],10)){
                     break;
                 }else{
@@ -47,7 +47,7 @@
                 }
             }
             while(true){
-                stLt[1]= prompt(`範囲の最大値を${stLt[0]}~10で入力してください。`,1);
+                stLt[1]= parseInt(prompt(`範囲の最大値を${stLt[0]}~10で入力してください。`,1));
                 if(isInnerRange(stLt[1],10,stLt[0])){
                     break;
                 }else{
