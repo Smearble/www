@@ -27,9 +27,8 @@
         function lcm(a,b){
             return (a*b) / gcd(a,b);
         }
-        const calcResult = (start,last)=>{
-            let arr=[...Array(last - (start -1)).keys()].map(x=>x+start);
-            return arr.reduce(lcm,1);
+        function calcResult(start,last){
+            return [...Array(last - start + 1).keys()].map(x=>x+start).reduce(lcm,1);
         }
         function isInnerRange(num,max,min){
             if(typeof min === "undefined"){
