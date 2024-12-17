@@ -41,7 +41,7 @@
             let stLt = [];
             while(true){
                 stLt[0]= prompt("範囲の最小値を1~10で入力してください。",1);
-                if(isInnerRange(stLt[0],max)){
+                if(isInnerRange(stLt[0],10)){
                     break;
                 }else{
                     alert(`不正な値です。1 ~ 10までで入力してください`)
@@ -49,7 +49,7 @@
             }
             while(true){
                 stLt[1]= prompt(`範囲の最大値を${stLt[0]}~10で入力してください。`,1);
-                if(isInnerRange(stLt[1],max,stLt[0])){
+                if(isInnerRange(stLt[1],10,stLt[0])){
                     break;
                 }else{
                     alert(`不正な値です。${stLt[0]} ~ 10までで入力してください`)
