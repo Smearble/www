@@ -29,11 +29,11 @@
         ここにHTMLが表示されます。
     </div>
     <script>
-        /*
-        function showHTML(){
-            document.getElementById("copy").innerText=document.getElementById("original").innerHTML.replaceAll("\n"," ");
-        }//*/
         //*
+        function showHTML(){
+            document.getElementById("copy").textContents=document.getElementById("original").innerHTML;
+        }//*/
+        /*
         function showHTML(){
             document.getElementById("copy").innerHTML=
             document.getElementById("original").innerHTML
