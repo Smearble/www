@@ -6,7 +6,7 @@
     <title>プロパティ</title>
     <style>
         .box{
-            width:250px;
+            width:500px;
             padding:15px;
             margin:25px 0px;
             border: solid;
@@ -29,14 +29,16 @@
         ここにHTMLが表示されます。
     </div>
     <script>
+        /*
         function showHTML(){
             document.getElementById("copy").innerText=document.getElementById("original").innerHTML.replaceAll("\n"," ");
-        }
-        /*function showHTML(){
+        }//*/
+        //*
+        function showHTML(){
             document.getElementById("copy").innerHTML=
             document.getElementById("original").innerHTML
             .replaceAll("<","&lt;").replaceAll(">","&gt;");
-        }*/
+        }//*/
     </script>
 </body>
 </html>
