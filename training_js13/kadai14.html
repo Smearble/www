@@ -30,7 +30,7 @@
     </div>
     <script>
         function showHTML(){
-            document.getElementById("copy").innerText=document.getElementById("original").innerHTML;
+            document.getElementById("copy").innerText=document.getElementById("original").innerHTML.replaceAll("\n"," ");
         }
         /*function showHTML(){
             document.getElementById("copy").innerHTML=
